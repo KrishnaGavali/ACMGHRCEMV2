@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import { Github, Linkedin, Instagram } from "lucide-react";
 
-export default function President() {
+export default function EventManagement() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   /* 1️⃣  Scroll progress (0 → 1)  */
@@ -103,12 +103,13 @@ export default function President() {
         <div className="flex items-center justify-start w-full">
           <div className=" flex gap-x-5 justify-center items-center w-1/2">
             <Image
-              src="/President.jpg"
+              src="/EventManagement.jpg"
               alt="President"
               className=" object-cover relative z-10 border-2 border-blue-400 rounded-xl"
               height={500}
               width={500}
             />
+            {/* <div className="w-[500px] h-[500px] bg-blue-400  rounded-xl"></div> */}
 
             <motion.div
               className="w-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent"
@@ -124,7 +125,7 @@ export default function President() {
                 y: positionY,
               }}
             >
-              President
+              Event Lead
             </motion.p>
           ) : showContent === "Tagline" ? (
             <motion.p
@@ -134,22 +135,21 @@ export default function President() {
                 y: taglineY,
               }}
             >
-              Meet{" "}
-              <span className="text-blue-400 underline">Aditya Khurade</span>,
-              our <span className="text-blue-400 underline">President</span> –
-              the brain behind the vision, the calm behind the chaos, and the
-              person whose calendar probably has a calendar. They don’t just
-              lead; they inspire, organize, execute, and somehow still have time
-              to remind everyone of deadlines. From strategy to execution, from
-              ideas to impact – if it’s happening in ACM, chances are it started
-              with them. Here’s to the one who sets the bar and raises it every
-              time
+              Meet our <span className="text-blue-400">Tech Lead</span>– the
+              brain behind the bytes and the strategist powered by caffeine.
+              When he&quot;s not debugging life, he’s leading the club (or the
+              group chat 😎). Half visionary, half developer, and fully ready to
+              turn ideas into action. Say hello to{" "}
+              <span className="text-blue-400">Krishna Gavali</span> – Tech Lead
+              of ACM! 🚀👨‍💻 Warning: may randomly talk about projects,
+              GitHub, or memes.
             </motion.p>
           ) : showContent === "Details" ? (
             <div className=" flex-col">
-              <h1 className="text-[3vw]"> Aditya Khurade</h1>
-              <h2 className=" text-blue-400 text-[2vw]">President</h2>
-
+              <h1 className="text-[3vw]">Anurag Jadhav</h1>
+              <h2 className=" text-blue-400 text-[2vw]">
+                Event Management Lead
+              </h2>
               <div className="flex gap-4 mt-4">
                 <a
                   href="https://instagram.com"

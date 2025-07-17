@@ -3,7 +3,7 @@ import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-const TeamsTitle = () => {
+const TechTeamTitle = () => {
   const divRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -26,11 +26,11 @@ const TeamsTitle = () => {
             opacity: titleOpacity,
           }}
         >
-          Meet the Team
+          Meet the Tech Team
         </motion.h1>
       </div>
     </div>
   );
 };
 
-export default TeamsTitle;
+export default TechTeamTitle;

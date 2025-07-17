@@ -37,13 +37,6 @@ const Moto_Vision = () => {
   const lineWidthMoto = useTransform(scrollYProgress, [0.15, 0.35], [0, 300]);
   const lineWidthVision = useTransform(scrollYProgress, [0.65, 0.85], [0, 300]);
 
-  // Glow effect animation
-  const glowOpacity = useTransform(
-    scrollYProgress,
-    [0.1, 0.3, 0.7, 0.9],
-    [0, 0.6, 0.6, 0]
-  );
-
   return (
     <div ref={divRef} className="w-full h-[1000vh] flex flex-col relative">
       {/* === MOTO Section === */}

@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import { Github, Linkedin, Instagram } from "lucide-react";
 
-export default function President() {
+export default function VicePresident() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   /* 1️⃣  Scroll progress (0 → 1)  */
@@ -103,7 +103,7 @@ export default function President() {
         <div className="flex items-center justify-start w-full">
           <div className=" flex gap-x-5 justify-center items-center w-1/2">
             <Image
-              src="/President.jpg"
+              src="/VicePresident.png"
               alt="President"
               className=" object-cover relative z-10 border-2 border-blue-400 rounded-xl"
               height={500}
@@ -124,7 +124,7 @@ export default function President() {
                 y: positionY,
               }}
             >
-              President
+              Vice President
             </motion.p>
           ) : showContent === "Tagline" ? (
             <motion.p
@@ -135,20 +135,20 @@ export default function President() {
               }}
             >
               Meet{" "}
-              <span className="text-blue-400 underline">Aditya Khurade</span>,
-              our <span className="text-blue-400 underline">President</span> –
-              the brain behind the vision, the calm behind the chaos, and the
-              person whose calendar probably has a calendar. They don’t just
-              lead; they inspire, organize, execute, and somehow still have time
-              to remind everyone of deadlines. From strategy to execution, from
-              ideas to impact – if it’s happening in ACM, chances are it started
-              with them. Here’s to the one who sets the bar and raises it every
-              time
+              <span className="text-blue-400 underline">Shubham Shahu</span>,
+              our{" "}
+              <span className="text-blue-400 underline">Vice President</span> –
+              the bridge between chaos and clarity. He doesnt&quot; just lead,
+              he organizes the organizers, plans the plans, and still manages to
+              crack a joke during serious meetings. Known for turning “we should
+              do this” into “we already did,” he’s the calm in the storm and the
+              storm in a boring club. Spreadsheets fear him, Google Forms obey
+              him, and deadlines respect him
             </motion.p>
           ) : showContent === "Details" ? (
             <div className=" flex-col">
-              <h1 className="text-[3vw]"> Aditya Khurade</h1>
-              <h2 className=" text-blue-400 text-[2vw]">President</h2>
+              <h1 className="text-[3vw]"> Shubham Shahu</h1>
+              <h2 className=" text-blue-400 text-[2vw]">Vice President</h2>
 
               <div className="flex gap-4 mt-4">
                 <a
