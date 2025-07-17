@@ -12,8 +12,6 @@ const TechMembers = () => {
     offset: ["start start", "end end"],
   });
 
-  const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
-  const bgOpacity = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
   const sectionOpacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1]);
 
   const membersData = [
@@ -53,13 +51,6 @@ const TechMembers = () => {
 
   return (
     <div ref={sectionRef} className="relative h-[600vh] w-full text-white">
-      <motion.div
-        className="fixed inset-0 -z-10"
-        style={{ scale: bgScale, opacity: bgOpacity }}
-      >
-        <div className="h-full w-full bg-[radial-gradient(circle_at_50%_50%,#0E398D_0%,#000_100%)]" />
-      </motion.div>
-
       <motion.div
         className="sticky top-0 h-screen flex flex-col items-center justify-center"
         style={{ opacity: sectionOpacity }}

@@ -48,7 +48,7 @@ const SideBar = ({
           ease: "easeInOut",
           delay: 0.2,
         }}
-        className=" w-[35%] h-full bg-blue-400/20 rounded-l-4xl border-l-2  border-blue-400 shadow-[0px_0px_20px_#51A2FF]"
+        className=" w-[35%] h-full bg-black rounded-l-4xl border-l-2 shadow-[0px_0px_20px_#51A2FF]"
         id="SideBarNavigation"
       ></motion.div>
     </motion.div>

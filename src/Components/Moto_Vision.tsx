@@ -44,8 +44,6 @@ const Moto_Vision = () => {
         id="moto"
         className="top-0 h-screen w-full flex items-center justify-center sticky overflow-hidden"
         style={{
-          backgroundImage:
-            "radial-gradient(at 50% 50%, #0E398D -40%, rgba(0,0,0,1) 100%)",
           opacity: motoOpacity,
         }}
       >
@@ -83,8 +81,6 @@ const Moto_Vision = () => {
         id="vision"
         className="top-0 h-screen w-full flex items-center justify-center sticky overflow-hidden"
         style={{
-          backgroundImage:
-            "radial-gradient(at 50% 50%, #0E398D -40%, rgba(0,0,0,1) 100%)",
           opacity: visionOpacity,
         }}
       >

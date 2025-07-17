@@ -22,10 +22,6 @@ export default function President() {
     "Position" | "Tagline" | "Details"
   >("Position");
 
-  /* 2️⃣  Fancy BG transforms  */
-  const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
-  const bgOpacity = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
-
   const lineWidthMoto = useTransform(scrollYProgress, [0, 1], [0, 500]);
   const sectionOpacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1]);
 
@@ -64,38 +60,6 @@ export default function President() {
 
   return (
     <div ref={sectionRef} className="relative h-[600vh] w-full text-white">
-      <motion.div
-        className="fixed inset-0 -z-10"
-        style={{ scale: bgScale, opacity: bgOpacity }}
-      >
-        <div className="h-full w-full bg-[radial-gradient(circle_at_50%_50%,#0E398D_0%,#000_100%)]" />
-      </motion.div>
-      {/* Floating dots (trimmed to 40 for perf) */}
-      <div className="fixed inset-0 pointer-events-none">
-        {Array.from({ length: 40 }).map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-blue-400/20 rounded-full"
-            animate={{
-              y: [0, -100, 0],
-              x: [0, Math.random() * 100 - 50, 0],
-              opacity: [0, 1, 0],
-              scale: [0, 1, 0],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-              ease: "easeInOut",
-            }}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-          />
-        ))}
-      </div>
-      {/* Content that scrolls under the sticky video */}
       <motion.div
         className=" px-4 sticky z-10 h-screen top-0 flex justify-center items-center"
         style={{ opacity: sectionOpacity }}
