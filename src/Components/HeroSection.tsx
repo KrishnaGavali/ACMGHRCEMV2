@@ -45,7 +45,7 @@ const HeroSection = () => {
               width={1440}
               height={1080}
               alt=""
-              className="w-screen h-screen fixed top-0"
+              className="w-screen h-screen fixed top-0 object-cover"
             />
             <div
               className=" inset-0 w-full h-screen fixed top-0 to-black from-transparent bg-radial-[at_50%_50%]"

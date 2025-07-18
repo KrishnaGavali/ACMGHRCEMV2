@@ -22,7 +22,9 @@ export default function TechLead() {
     "Position" | "Tagline" | "Details"
   >("Position");
 
-  const lineWidthMoto = useTransform(scrollYProgress, [0, 1], [0, 500]);
+  const SeparatorLineHeightLG = useTransform(scrollYProgress, [0, 1], [0, 450]);
+  const SeparatorLineHeightMD = useTransform(scrollYProgress, [0, 1], [0, 350]);
+  const SeparatorLineWidthSM = useTransform(scrollYProgress, [0, 1], [0, 250]);
   const sectionOpacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1]);
 
   const positionOpacity = useTransform(
@@ -60,31 +62,30 @@ export default function TechLead() {
 
   return (
     <div ref={sectionRef} className="relative h-[600vh] w-full text-white">
-      {/* Content that scrolls under the sticky video */}
       <motion.div
-        className=" px-4 sticky z-10 h-screen top-0 flex justify-center items-center"
+        className="px-4 sticky z-10 h-screen top-0 flex justify-center items-center"
         style={{ opacity: sectionOpacity }}
       >
-        <div className="flex items-center justify-start w-full">
-          <div className=" flex gap-x-5 justify-center items-center w-1/2">
-            {/* <Image
-              src="/ADACM.jpg"
-              alt="President"
-              className=" object-cover relative z-10 border-2 border-blue-400 rounded-xl"
-              height={500}
-              width={500}
-            /> */}
-            <div className="w-[500px] h-[500px] bg-blue-400  rounded-xl"></div>
-
+        <div className="flex flex-col md:flex-row items-center justify-start w-full gap-6">
+          <div className="flex flex-col md:flex-row gap-y-4 md:gap-x-4 justify-center items-center w-[90%] md:w-[40%]">
+            <div className="w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] bg-blue-400 rounded-xl"></div>
             <motion.div
-              className="w-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent"
-              style={{ height: lineWidthMoto }}
+              className="w-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent hidden lg:block"
+              style={{ height: SeparatorLineHeightLG }}
+            />
+            <motion.div
+              className="w-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent hidden md:block lg:hidden"
+              style={{ height: SeparatorLineHeightMD }}
+            />
+            <motion.div
+              className="h-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent block md:hidden"
+              style={{ width: SeparatorLineWidthSM }}
             />
           </div>
 
           {showContent === "Position" ? (
             <motion.p
-              className=" text-center text-[5vw]"
+              className="text-left text-[10vw] sm:text-[8vw] md:text-[6vw] lg:text-[4vw] md:w-[60%]"
               style={{
                 opacity: positionOpacity,
                 y: positionY,
@@ -93,26 +94,46 @@ export default function TechLead() {
               Tech Lead
             </motion.p>
           ) : showContent === "Tagline" ? (
-            <motion.p
-              className="text-left w-1/2 text-[1.5vw] font-light leading-relaxed tracking-wide"
-              style={{
-                opacity: taglineOpacity,
-                y: taglineY,
-              }}
-            >
-              Meet our <span className="text-blue-400">Tech Lead</span>– the
-              brain behind the bytes and the strategist powered by caffeine.
-              When he&quot;s not debugging life, he’s leading the club (or the
-              group chat 😎). Half visionary, half developer, and fully ready to
-              turn ideas into action. Say hello to{" "}
-              <span className="text-blue-400">Krishna Gavali</span> – Tech Lead
-              of ACM! 🚀👨‍💻 Warning: may randomly talk about projects,
-              GitHub, or memes.
-            </motion.p>
+            <>
+              <motion.p
+                className="text-center sm:text-left w-[90%] sm:w-3/4 md:w-[60%] text-sm sm:text-base md:text-[1.5vw] font-light leading-relaxed tracking-wide hidden md:block"
+                style={{
+                  opacity: taglineOpacity,
+                  y: taglineY,
+                }}
+              >
+                Meet our <span className="text-blue-400">Tech Lead</span> – the
+                brain behind the bytes and the strategist powered by caffeine.
+                When he’s not debugging life, he’s leading the club (or the
+                group chat 😎). Half visionary, half developer, and fully ready
+                to turn ideas into action. Say hello to{" "}
+                <span className="text-blue-400">Krishna Gavali</span> – Tech
+                Lead of ACM! 🚀👨‍💻 Warning: may randomly talk about projects,
+                GitHub, or memes.
+              </motion.p>
+              <motion.p
+                className="text-center sm:text-left w-[90%] sm:w-3/4 md:w-[60%] text-sm sm:text-base md:text-[1.5vw] font-light leading-relaxed tracking-wide block md:hidden"
+                style={{
+                  opacity: taglineOpacity,
+                  y: taglineY,
+                }}
+              >
+                Meet our <span className="text-blue-400">Tech Lead</span> – the
+                brain behind the bytes and the strategist powered by caffeine.
+                When he’s not debugging life, he’s leading the club (or the
+                group chat 😎). Warning: may randomly talk about projects,
+                GitHub, or memes.
+              </motion.p>
+            </>
           ) : showContent === "Details" ? (
-            <div className=" flex-col">
-              <h1 className="text-[3vw]"> Krishna Gavali</h1>
-              <h2 className=" text-blue-400 text-[2vw]">Tech Lead</h2>
+            <div className="flex flex-col items-center sm:items-start md:w-[60%]">
+              <h1 className="text-[8vw] sm:text-[6vw] md:text-[4vw]">
+                Krishna Gavali
+              </h1>
+              <h2 className="text-blue-400 text-[6vw] sm:text-[4vw] md:text-[3vw]">
+                Tech Lead
+              </h2>
+
               <div className="flex gap-4 mt-4">
                 <a
                   href="https://instagram.com"

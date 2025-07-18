@@ -1,18 +1,11 @@
 "use client";
 import React, { useRef } from "react";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { Github, Linkedin, Instagram } from "lucide-react";
 
 const TechMembers = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end end"],
-  });
-
-  const sectionOpacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1]);
 
   const membersData = [
     {
@@ -50,13 +43,12 @@ const TechMembers = () => {
   ];
 
   return (
-    <div ref={sectionRef} className="relative h-[600vh] w-full text-white">
-      <motion.div
-        className="sticky top-0 h-screen flex flex-col items-center justify-center"
-        style={{ opacity: sectionOpacity }}
-      >
-        <h1 className="text-[5vw] font-bold mb-10">Tech Members</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div ref={sectionRef} className="relative h-[150vh] w-full text-white">
+      <motion.div className="sticky top-0 min-h-screen flex flex-col items-center justify-center px-4">
+        <h1 className="text-4xl md:text-5xl lg:text-[5vw] font-bold mb-10 text-center">
+          Tech Members
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
           {membersData.map((member, index) => (
             <motion.div
               key={index}
@@ -70,11 +62,15 @@ const TechMembers = () => {
                 src={member.Image}
                 alt={member.Name}
                 className="rounded-xl border-2 border-blue-400"
-                height={200}
-                width={200}
+                height={150}
+                width={150}
               />
-              <h2 className="text-[2vw] mt-4">{member.Name}</h2>
-              <h3 className="text-blue-400 text-[1.5vw]">{member.Position}</h3>
+              <h2 className="text-lg md:text-xl lg:text-2xl mt-4">
+                {member.Name}
+              </h2>
+              <h3 className="text-blue-400 text-sm md:text-base lg:text-lg">
+                {member.Position}
+              </h3>
               <div className="flex gap-4 mt-4">
                 <a
                   href={member.Instagram}
