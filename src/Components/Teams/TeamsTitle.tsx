@@ -13,8 +13,8 @@ const TeamsTitle = () => {
 
   const titleOpacity = useTransform(
     scrollYProgress,
-    [0, 0.25, 0.75, 1],
-    [0, 1, 1, 0]
+    [0, 1],
+    [1, 0]
   );
 
   return (

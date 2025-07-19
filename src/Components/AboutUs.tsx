@@ -15,31 +15,23 @@ const AboutUs = () => {
   // Opacity animations for sections
   const sectionOpacity = useTransform(
     scrollYProgress,
-    [0, 0.2, 0.95, 1],
+    [0, 0.2, 0.9, 1],
     [0, 1, 1, 0]
   );
 
   // Title animations
-  const titleY = useTransform(
-    scrollYProgress,
-    [0, 0, 0.95, 1],
-    [40, 0, 0, -40]
-  );
+  const titleY = useTransform(scrollYProgress, [0, 0, 0.9, 1], [40, 0, 0, -40]);
   const titleOpacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
 
   // Main title animations
-  const mainTitleY = useTransform(
-    scrollYProgress,
-    [0, 0.3, 0.95, 1],
-    [60, 0, 0, -60]
-  );
+  const mainTitleY = useTransform(scrollYProgress, [0, 0.5], [60, 0]);
   const mainTitleOpacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   // Decorative line animations
   const lineWidth = useTransform(scrollYProgress, [0, 1], [0, 300]);
 
   return (
-    <div ref={divRef} className="w-full h-[500vh] flex flex-col relative">
+    <div ref={divRef} className="w-full h-[250vh] flex flex-col relative">
       {/* === About Us Section === */}
       <motion.div
         id="about-us"
@@ -91,7 +83,7 @@ const AboutUs = () => {
 
             {/* Decorative Line - Hidden on mobile */}
             <motion.div
-              className="hidden md:block w-px bg-gradient-to-b from-transparent via-blue-400/60 to-transparent relative"
+              className="hidden md:block w-1 bg-radial from-blue-400/60 to-transparent relative"
               style={{ height: lineWidth }}
             >
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-blue-400 rounded-full shadow-lg shadow-blue-400/50"></div>

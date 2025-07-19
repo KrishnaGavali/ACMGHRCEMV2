@@ -1,0 +1,212 @@
+[
+  {
+    "eventId": "E001",
+    "eventName": "Tech Talk: AI Revolution",
+    "eventDate": "21",
+    "eventMonth": "July",
+    "eventYear": "2025",
+    "eventTime": "10:30 AM - 01:30 PM",
+    "location": "Auditorium A",
+    "description": "An insightful talk on the latest advancements in Artificial Intelligence.",
+    "instagramLink": "https://instagram.com/techtalk_ai",
+    "linkedInLink": "https://linkedin.com/company/techtalk_ai",
+    "posterPhoto": "/events/techtalk_ai.jpg",
+    "Speaker": {
+      "name": "Dr. Jane Smith",
+      "Position": "AI Researcher",
+      "Company": "Tech Innovations Inc.",
+      "bio": "Dr. Jane Smith is a leading AI researcher with over 10 years",
+      "photo": "/speakers/jane_smith.jpg"
+    },
+    "status": "upcoming"
+  },
+  {
+    "eventId": "E002",
+    "eventName": "Blockchain Basics",
+    "eventDate": "15",
+    "eventMonth": "April",
+    "eventYear": "2025",
+    "eventTime": "02:00 PM - 05:00 PM",
+    "location": "Conference Room B",
+    "description": "A beginner's guide to understanding blockchain technology.",
+    "instagramLink": "https://instagram.com/blockchain_basics",
+    "linkedInLink": "https://linkedin.com/company/blockchain_basics",
+    "posterPhoto": "/events/blockchain_basics.jpg",
+    "Speaker": {
+      "name": "Mr. John Doe",
+      "Position": "Blockchain Developer",
+      "Company": "Crypto Solutions",
+      "bio": "John Doe is a blockchain expert with a passion for teaching.",
+      "photo": "/speakers/john_doe.jpg"
+    },
+    "status": "Completed"
+  },
+  {
+    "eventId": "E003",
+    "eventName": "Cybersecurity Essentials",
+    "eventDate": "10",
+    "eventMonth": "May",
+    "eventYear": "2025",
+    "eventTime": "11:00 AM - 01:00 PM",
+    "location": "Auditorium C",
+    "description": "Learn the fundamentals of cybersecurity and how to protect your data.",
+    "instagramLink": "https://instagram.com/cybersecurity_essentials",
+    "linkedInLink": "https://linkedin.com/company/cybersecurity_essentials",
+    "posterPhoto": "/events/cybersecurity_essentials.jpg",
+    "Speaker": {
+      "name": "Ms. Alice Brown",
+      "Position": "Cybersecurity Analyst",
+      "Company": "SecureTech",
+      "bio": "Alice Brown specializes in network security and data protection.",
+      "photo": "/speakers/alice_brown.jpg"
+    },
+    "status": "Completed"
+  },
+  {
+    "eventId": "E004",
+    "eventName": "Cloud Computing Workshop",
+    "eventDate": "18",
+    "eventMonth": "June",
+    "eventYear": "2025",
+    "eventTime": "09:00 AM - 12:00 PM",
+    "location": "Lab 1",
+    "description": "Hands-on workshop on cloud computing and its applications.",
+    "instagramLink": "https://instagram.com/cloud_computing_workshop",
+    "linkedInLink": "https://linkedin.com/company/cloud_computing_workshop",
+    "posterPhoto": "/events/cloud_computing_workshop.jpg",
+    "Speaker": {
+      "name": "Dr. Emily White",
+      "Position": "Cloud Architect",
+      "Company": "Cloudify Inc.",
+      "bio": "Emily White has extensive experience in cloud infrastructure design.",
+      "photo": "/speakers/emily_white.jpg"
+    },
+    "status": "Completed"
+  },
+  {
+    "eventId": "E005",
+    "eventName": "IoT Innovations",
+    "eventDate": "25",
+    "eventMonth": "April",
+    "eventYear": "2025",
+    "eventTime": "03:00 PM - 06:00 PM",
+    "location": "Auditorium B",
+    "description": "Exploring the latest trends in Internet of Things technology.",
+    "instagramLink": "https://instagram.com/iot_innovations",
+    "linkedInLink": "https://linkedin.com/company/iot_innovations",
+    "posterPhoto": "/events/iot_innovations.jpg",
+    "Speaker": {
+      "name": "Mr. Robert Green",
+      "Position": "IoT Specialist",
+      "Company": "SmartTech",
+      "bio": "Robert Green is a pioneer in IoT solutions and smart devices.",
+      "photo": "/speakers/robert_green.jpg"
+    },
+    "status": "Completed"
+  },
+  {
+    "eventId": "E006",
+    "eventName": "Big Data Analytics",
+    "eventDate": "12",
+    "eventMonth": "May",
+    "eventYear": "2025",
+    "eventTime": "10:00 AM - 01:00 PM",
+    "location": "Conference Room A",
+    "description": "Understanding the power of big data and its applications.",
+    "instagramLink": "https://instagram.com/big_data_analytics",
+    "linkedInLink": "https://linkedin.com/company/big_data_analytics",
+    "posterPhoto": "/events/big_data_analytics.jpg",
+    "Speaker": {
+      "name": "Dr. Michael Lee",
+      "Position": "Data Scientist",
+      "Company": "Data Insights Co.",
+      "bio": "Michael Lee is a renowned data scientist with a focus on analytics.",
+      "photo": "/speakers/michael_lee.jpg"
+    },
+    "status": "Completed"
+  },
+  {
+    "eventId": "E007",
+    "eventName": "AR/VR Trends",
+    "eventDate": "20",
+    "eventMonth": "June",
+    "eventYear": "2025",
+    "eventTime": "01:00 PM - 04:00 PM",
+    "location": "Lab 2",
+    "description": "Discover the latest advancements in augmented and virtual reality.",
+    "instagramLink": "https://instagram.com/ar_vr_trends",
+    "linkedInLink": "https://linkedin.com/company/ar_vr_trends",
+    "posterPhoto": "/events/ar_vr_trends.jpg",
+    "Speaker": {
+      "name": "Ms. Sophia Taylor",
+      "Position": "AR/VR Developer",
+      "Company": "Immersive Tech",
+      "bio": "Sophia Taylor is an expert in creating immersive AR/VR experiences.",
+      "photo": "/speakers/sophia_taylor.jpg"
+    },
+    "status": "Completed"
+  },
+  {
+    "eventId": "E008",
+    "eventName": "Quantum Computing 101",
+    "eventDate": "05",
+    "eventMonth": "July",
+    "eventYear": "2025",
+    "eventTime": "10:00 AM - 12:00 PM",
+    "location": "Auditorium D",
+    "description": "An introduction to the fascinating world of quantum computing.",
+    "instagramLink": "https://instagram.com/quantum_computing_101",
+    "linkedInLink": "https://linkedin.com/company/quantum_computing_101",
+    "posterPhoto": "/events/quantum_computing_101.jpg",
+    "Speaker": {
+      "name": "Dr. Kevin Brown",
+      "Position": "Quantum Physicist",
+      "Company": "Quantum Labs",
+      "bio": "Kevin Brown is a leading researcher in quantum computing.",
+      "photo": "/speakers/kevin_brown.jpg"
+    },
+    "status": "Completed"
+  },
+  {
+    "eventId": "E009",
+    "eventName": "AI Ethics and Society",
+    "eventDate": "30",
+    "eventMonth": "April",
+    "eventYear": "2025",
+    "eventTime": "02:00 PM - 05:00 PM",
+    "location": "Conference Room C",
+    "description": "Discussing the ethical implications of artificial intelligence.",
+    "instagramLink": "https://instagram.com/ai_ethics_society",
+    "linkedInLink": "https://linkedin.com/company/ai_ethics_society",
+    "posterPhoto": "/events/ai_ethics_society.jpg",
+    "Speaker": {
+      "name": "Ms. Laura Wilson",
+      "Position": "AI Ethicist",
+      "Company": "Ethical AI Foundation",
+      "bio": "Laura Wilson is dedicated to promoting ethical AI practices.",
+      "photo": "/speakers/laura_wilson.jpg"
+    },
+    "status": "Completed"
+  },
+  {
+    "eventId": "E010",
+    "eventName": "Future of Robotics",
+    "eventDate": "22",
+    "eventMonth": "May",
+    "eventYear": "2025",
+    "eventTime": "03:00 PM - 06:00 PM",
+    "location": "Auditorium E",
+    "description": "Exploring the future possibilities of robotics and automation.",
+    "instagramLink": "https://instagram.com/future_of_robotics",
+    "linkedInLink": "https://linkedin.com/company/future_of_robotics",
+    "posterPhoto": "/events/future_of_robotics.jpg",
+    "Speaker": {
+      "name": "Mr. David Clark",
+      "Position": "Robotics Engineer",
+      "Company": "RoboTech",
+      "bio": "David Clark is a robotics engineer with a vision for the future.",
+      "photo": "/speakers/david_clark.jpg"
+    },
+    "status": "Completed"
+  }
+]
