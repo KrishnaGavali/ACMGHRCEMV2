@@ -28,7 +28,7 @@ const HeroSection = () => {
   const opacityTransform = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
   const blueGradientOpacity = useTransform(scrollYProgress, [0.4, 0.6], [0, 1]);
   const acmScale = useTransform(scrollYProgress, [0, 0.6], [44, 1]);
-  const ghrcemOpacity = useTransform(scrollYProgress, [0.6, 0.7], [0, 1]);
+  const ghrcemOpacity = useTransform(scrollYProgress, [0.6, 0.94], [0, 1]);
   const scrollOpacity = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
   const scrollY = useTransform(scrollYProgress, [0.8, 0.95], [0, 100]);
 
