@@ -14,12 +14,12 @@ const Navbar = () => {
         </Link>
         <div className="flex space-x-4 items-center">
           <Link href={"/team"}>
-            <button className="px-4 py-2 bg-[#2182f2] text-white rounded-full hover:bg-blue-800 cursor-pointer transition-all duration-150 text-sm sm:text-base">
+            <button className="px-4 py-2 bg-transparent border border-[#2182f2] text-white rounded-full hover:bg-blue-800 cursor-pointer transition-all duration-150 text-sm sm:text-base">
               Team
             </button>
           </Link>
           <button
-            className="px-4 py-2 bg-[#2182f2] hover:bg-blue-800 text-white rounded-full cursor-pointer transition-all duration-150 text-sm sm:text-base"
+            className="px-4 py-2 bg-transparent border border-[#2182f2] hover:bg-blue-800 text-white rounded-full cursor-pointer transition-all duration-150 text-sm sm:text-base"
             disabled
           >
             Events
