@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`w-[95%] h-16 mt-4 fixed top-0 left-1/2 transform -translate-x-1/2 items-center px-8 z-50 flex justify-between bg-black bg-opacity-50 backdrop-blur-lg rounded-3xl shadow-lg transition-transform duration-300 ${
+        className={`w-[95%] h-16 mt-4 fixed top-0 left-1/2 transform -translate-x-1/2 items-center px-8 z-50 flex justify-between bg-transparent bg-opacity-50 backdrop-blur-lg rounded-3xl shadow-lg transition-transform duration-300 ${
           showNavbar ? "translate-y-0" : "-translate-y-24"
         }  border border-blue-400`}
       >

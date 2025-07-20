@@ -5,72 +5,79 @@ import { Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="h-[50vh] flex flex-col justify-center items-center text-white relative overflow-hidden bg-blue-400/10 backdrop-blur-lg rounded-t-2xl border-slate-700">
+    <motion.footer
+      className=" text-white py-12 relative overflow-hidden bg-white/5 border-t-2 border-slate-700 rounded-t-4xl backdrop-blur-xs"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.25 }}
+    >
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-1/3 -left-1/3 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-1/3 -right-1/3 w-96 h-96 bg-cyan-200/20 rounded-full blur-3xl"></div>
+        <div className="absolute -top-1/4 -left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-1/4 -right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
       </div>
 
-      {/* Navigation Links */}
-      <motion.nav
-        className="flex space-x-8 text-lg font-medium z-10"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <a href="#home" className="hover:underline">
-          Home
-        </a>
-        <a href="#teams" className="hover:underline">
-          Teams
-        </a>
-        <a href="#events" className="hover:underline">
-          Events
-        </a>
-      </motion.nav>
-
-      {/* Social Media Links */}
-      <motion.div
-        className="flex space-x-6 mt-6 z-10"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
-        <a
-          href="https://www.linkedin.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-blue-300"
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+        {/* Navigation Links */}
+        <motion.nav
+          className="flex justify-center space-x-8 text-lg font-medium mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.25 }}
         >
-          <Linkedin size={28} />
-        </a>
-        <a
-          href="https://www.instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-pink-300"
-        >
-          <Instagram size={28} />
-        </a>
-      </motion.div>
+          <a href="#home" className="hover:text-blue-400 transition">
+            Home
+          </a>
+          <a href="#teams" className="hover:text-blue-400 transition">
+            Teams
+          </a>
+          <a href="#events" className="hover:text-blue-400 transition">
+            Events
+          </a>
+        </motion.nav>
 
-      {/* Footer Text */}
-      <motion.div
-        className="text-center mt-6 z-10"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
-      >
-        <p className="text-sm md:text-base">
-          © {new Date().getFullYear()} All rights reserved to ACM GHRCE.
-        </p>
-        <p className="text-sm md:text-base">
-          Built with love <span className="text-blue-300">💙</span> by Tech
-          Warriors of ACM GHRCEM.
-        </p>
-      </motion.div>
-    </footer>
+        {/* Social Media Links */}
+        <motion.div
+          className="flex justify-center space-x-6 mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-400 transition"
+          >
+            <Linkedin size={28} />
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-pink-400 transition"
+          >
+            <Instagram size={28} />
+          </a>
+        </motion.div>
+
+        {/* Footer Text */}
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <p className="text-sm md:text-base">
+            © {new Date().getFullYear()} ACM GHRCE. All rights reserved.
+          </p>
+          <p className="text-sm md:text-base mt-2">
+            Built with <span className="text-blue-400">💙</span> by Tech
+            Warriors of ACM GHRCEM.
+          </p>
+        </motion.div>
+      </div>
+    </motion.footer>
   );
 };
 

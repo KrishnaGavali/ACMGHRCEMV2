@@ -11,14 +11,10 @@ const TeamsTitle = () => {
     offset: ["start start", "end end"],
   });
 
-  const titleOpacity = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [1, 0]
-  );
+  const titleOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
-    <div ref={divRef} className="h-[400vh]">
+    <div ref={divRef} className="h-[200vh]">
       <div className=" h-screen w-full flex justify-center items-center sticky top-0">
         <motion.h1
           className="text-[7vw] font-black text-blue-400 tracking-tight leading-none"
