@@ -3,13 +3,13 @@ import Image from "next/image";
 import TeamsTitle from "@/Components/Teams/TeamsTitle";
 import President from "@/Components/Teams/President";
 import VicePresident from "@/Components/Teams/VicePresident";
-import TechTeamTitle from "@/Components/Teams/TechTeamTitle";
+// import TechTeamTitle from "@/Components/Teams/TechTeamTitle";
 import TechLead from "@/Components/Teams/TechLead";
 import TechMembers from "@/Components/Teams/TeamMembers/TechMembers";
-import EventTeamTitle from "@/Components/Teams/EventTeamTitle";
+// import EventTeamTitle from "@/Components/Teams/EventTeamTitle";
 import EventManagement from "@/Components/Teams/EventManagement";
 import EventMembers from "@/Components/Teams/TeamMembers/EventMembers";
-import PRTeamTitle from "@/Components/Teams/PRTeamTitle";
+// import PRTeamTitle from "@/Components/Teams/PRTeamTitle";
 import PRLead from "@/Components/Teams/PRLead";
 import PRMembers from "@/Components/Teams/TeamMembers/PRMembers";
 import Footer from "@/Components/Footer";
@@ -44,13 +44,13 @@ const Page = () => {
             <TeamsTitle />
             <President />
             <VicePresident />
-            <TechTeamTitle />
+            {/* <TechTeamTitle /> */}
             <TechLead />
             <TechMembers />
-            <EventTeamTitle />
+            {/* <EventTeamTitle /> */}
             <EventManagement />
             <EventMembers />
-            <PRTeamTitle />
+            {/* <PRTeamTitle /> */}
             <PRLead />
             <PRMembers />
           </div>
