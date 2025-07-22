@@ -13,14 +13,10 @@ const AboutUs = () => {
   });
 
   // Opacity animations for sections
-  const sectionOpacity = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.9, 1],
-    [0, 1, 1, 0]
-  );
+  const sectionOpacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
 
   // Title animations
-  const titleY = useTransform(scrollYProgress, [0, 0, 0.9, 1], [40, 0, 0, -40]);
+  const titleY = useTransform(scrollYProgress, [0, 0.2], [40, 0]);
   const titleOpacity = useTransform(scrollYProgress, [0, 0.4], [0, 1]);
 
   // Main title animations
