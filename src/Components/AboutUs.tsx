@@ -26,6 +26,10 @@ const AboutUs = () => {
   // Decorative line animations
   const lineWidth = useTransform(scrollYProgress, [0, 1], [0, 300]);
 
+  // Events section animations
+  const eventsY = useTransform(scrollYProgress, [0.3, 0.6], [40, 0]);
+  const eventsOpacity = useTransform(scrollYProgress, [0.3, 0.6], [0, 1]);
+
   return (
     <div ref={divRef} className="w-full h-[250vh] flex flex-col relative">
       {/* === About Us Section === */}
@@ -39,7 +43,7 @@ const AboutUs = () => {
         <div className="w-[95%] max-w-7xl mx-auto relative z-10">
           {/* Main Title */}
           <motion.div
-            className="text-center mb-16 md:mb-20"
+            className="text-center mb-4"
             style={{
               y: mainTitleY,
               opacity: mainTitleOpacity,
@@ -123,6 +127,29 @@ const AboutUs = () => {
               </div>
             </motion.div>
           </div>
+
+          {/* Hosted Events Section */}
+          <motion.div
+            className="mt-16 text-center"
+            style={{
+              y: eventsY,
+              opacity: eventsOpacity,
+            }}
+          >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white">
+              Hosted 20+ Events
+            </h2>
+            <p className="text-lg md:text-xl lg:text-2xl text-blue-300 mt-4">
+              From workshops to hackathons, we bring students together to learn,
+              innovate, and grow.
+            </p>
+            <motion.div
+              className="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto mt-6 rounded-full"
+              initial={{ width: 0 }}
+              animate={{ width: 64 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+            />
+          </motion.div>
         </div>
 
         {/* Background Elements */}
