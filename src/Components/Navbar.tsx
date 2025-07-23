@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -49,7 +48,7 @@ const Navbar = () => {
             exit={{ height: "0px" }}
             transition={{ type: "spring", bounce: 0.25, duration: 0.4 }}
           >
-            {navItems.map((item, index) => (
+            {navItems.map((item) => (
               <motion.div
                 key={item.name}
                 className={`p-3 flex flex-col items-center justify-center transition-all duration-200 ${
