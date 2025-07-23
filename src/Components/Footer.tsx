@@ -1,7 +1,16 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Linkedin, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import {
+  Linkedin,
+  Instagram,
+  Mail,
+  MapPin,
+  Phone,
+  Heart,
+  Copyright,
+} from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -28,9 +37,12 @@ const Footer = () => {
           {/* Left: Logo & Tagline */}
           <div>
             <h2 className="text-xl font-bold flex items-center justify-center md:justify-start gap-2">
-              <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
-                A
-              </span>
+              <Image
+                src={"/ACMLogo.png"}
+                alt="ACM Logo"
+                width={40}
+                height={40}
+              />
               ACM GHRCEM
             </h2>
             <p className="text-sm mt-2 text-gray-300">
@@ -83,7 +95,7 @@ const Footer = () => {
                 <Mail size={24} />
               </a>
             </div>
-            <p className="text-xs text-center md:text-left">
+            <p className="text-sm text-center md:text-left">
               Join us in building the future of technology at GHRCEM!
             </p>
           </div>
@@ -96,8 +108,14 @@ const Footer = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <p>© {new Date().getFullYear()} ACM GHRCEM. All rights reserved.</p>
-          <p>Built with 💙 by Tech Warriors of ACM GHRCEM.</p>
+          <p className="flex items-center gap-1">
+            <Copyright className="h-5 w-5 text-blue-400" />{" "}
+            {new Date().getFullYear()} ACM GHRCEM. All rights reserved.
+          </p>
+          <p className="flex items-center gap-1">
+            Built with <Heart className="text-blue-400 w-5 h-5" /> by Tech
+            Warriors of ACM GHRCEM.
+          </p>
         </motion.div>
       </div>
     </motion.footer>
