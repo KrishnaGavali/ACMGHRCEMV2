@@ -36,7 +36,7 @@ const Footer = () => {
         >
           {/* Left: Logo & Tagline */}
           <div>
-            <h2 className="text-xl font-bold flex items-center justify-center md:justify-start gap-2">
+            <h2 className="text-xl font-bold flex items-center justify-start gap-2">
               <Image
                 src={"/ACMLogo.png"}
                 alt="ACM Logo"
@@ -45,18 +45,20 @@ const Footer = () => {
               />
               ACM GHRCEM
             </h2>
-            <p className="text-sm mt-2 text-gray-300">
+            <p className="text-sm mt-2 text-gray-300 text-left">
               Empowering the next generation of tech innovators through
               collaboration, learning, and cutting-edge projects.
             </p>
           </div>
 
           {/* Center: Contact Info */}
-          <div className="text-sm text-gray-300 flex flex-col items-center md:items-start gap-y-2">
+          <div className="text-sm text-gray-300 flex flex-col items-start gap-y-2">
             <h3 className="font-semibold mb-2">Get In Touch</h3>
             <p className="flex items-center gap-2 text-center md:text-left">
               <MapPin className="text-blue-400 inline w-5 h-5" />
-              <span>GH Raisoni College of Engineering & Management, Pune</span>
+              <span className="text-left">
+                GH Raisoni College of Engineering & Management, Pune
+              </span>
             </p>
             <p className="flex items-center gap-2 text-center md:text-left">
               <Mail className="text-blue-400 inline w-5 h-5" />

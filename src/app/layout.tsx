@@ -28,7 +28,7 @@ const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
           infinite: false,
         }}
       />
-      <body className={`${Font.className} antialiased bg-black `}>
+      <body className={`${Font.className} antialiased bg-black`}>
         <div className="h-screen w-full bg-[radial-gradient(circle_at_50%_50%,#0E398D_-40%,#000_100%)] fixed -z-10"></div>
         <div className=" hidden md:block">
           <ParticleEffect />
