@@ -42,25 +42,21 @@ const Navbar = () => {
       <AnimatePresence mode="wait">
         {isSidebarOpen && (
           <motion.div
-            className="bg-white/20 backdrop-blur-sm w-[60px] fixed top-3 right-[6px] z-[49] rounded-full flex flex-col items-center text-white pt-20 overflow-hidden"
+            className="bg-white/20 backdrop-blur-sm w-[60px] fixed top-3 right-[6px] z-[49] rounded-full pt-10 flex flex-col items-center text-white overflow-hidden justify-evenly"
             initial={{ height: "0px" }}
             animate={{ height: "350px" }}
             exit={{ height: "0px" }}
-            transition={{ type: "spring", bounce: 0.25, duration: 0.4 }}
           >
             {navItems.map((item) => (
               <motion.div
                 key={item.name}
-                className={`p-3 flex flex-col items-center justify-center transition-all duration-200 ${
-                  pathname === item.href ? "bg-white/40 rounded-full" : ""
+                className={`p-3 flex flex-col items-center justify-center transition-all duration-200 hover:bg-white/50 rounded-full ${
+                  pathname === item.href ? "bg-white/40 " : ""
                 }`}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.95 }}
               >
                 <Link href={item.href} onClick={() => setIsSidebarOpen(false)}>
                   <div className="flex flex-col items-center gap-1 text-xs">
                     {item.icon}
-                    <span className="text-[10px]">{item.name}</span>
                   </div>
                 </Link>
               </motion.div>
