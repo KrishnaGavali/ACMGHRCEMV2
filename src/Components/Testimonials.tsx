@@ -87,7 +87,7 @@ const Testimonials = () => {
         <div className="absolute -bottom-1/4 -right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-6 lg:px-16 z-10 top-1/4 sticky flex items-center justify-center mb-12">
+      <div className="container mx-auto px-6 lg:px-16 z-10 top-1/4 sticky flex flex-col items-center justify-center mb-12">
         {/* 2-column layout */}
         <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start">
           {/* Left Column: Heading */}
@@ -124,6 +124,7 @@ const Testimonials = () => {
                 <div className="relative z-10">
                   <h4 className="text-xl font-semibold">{testimonial.name}</h4>
                   <p className="text-cyan-300 text-sm">{testimonial.role}</p>
+                  <p className="mt-4 text-gray-200">{testimonial.feedback}</p>
                 </div>
               </motion.div>
             </AnimatePresence>

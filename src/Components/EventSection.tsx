@@ -54,7 +54,7 @@ const EventSection = () => {
     <motion.div
       ref={sectionRef}
       id="EventSection"
-      className="min-h-screen py-20 text-white"
+      className=" py-20 text-white"
     >
       <div className="text-center mb-10">
         <h1 className="text-4xl md:text-5xl font-bold tracking-wide text-blue-400">
