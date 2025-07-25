@@ -15,7 +15,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <motion.footer
-      className="text-white py-12 relative overflow-hidden bg-white/5 border-t-2 border-slate-700 rounded-t-4xl backdrop-blur-xs"
+      className="text-white py-12 relative overflow-hidden bg-white/5 border-t-2 border-slate-700 backdrop-blur-xs"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.25 }}

@@ -39,29 +39,6 @@ const testimonials = [
       "Met my best friends and mentors here. Amazing platform for growth.",
     role: "UI/UX Designer",
   },
-  {
-    name: "Aniket Desai",
-    feedback:
-      "The team culture and collaborative spirit make ACM events so memorable.",
-    role: "Backend Developer",
-  },
-  {
-    name: "Sneha Patil",
-    feedback: "From zero to hero in JavaScript — all thanks to ACM workshops!",
-    role: "Frontend Developer",
-  },
-  {
-    name: "Yash Mehta",
-    feedback:
-      "Best place to explore tech as a beginner. Truly student-driven and fun!",
-    role: "Cloud Intern",
-  },
-  {
-    name: "Divya Nair",
-    feedback:
-      "ACM gave me the courage to participate in my first ever hackathon. Life-changing!",
-    role: "Cybersecurity Student",
-  },
 ];
 
 const Testimonials = () => {
@@ -101,16 +78,16 @@ const Testimonials = () => {
   return (
     <motion.section
       ref={sectionRef}
-      className="relative z-10 py-24 h-[200vh]"
+      className="relative z-10 h-[200vh] bg-gradient-to-b from-transparent via-black to-blue-900"
       style={{ opacity, y: translateY }}
     >
-      {/* Background Blur Effects */}
+      {/* Background Glow Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-1/4 -left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
         <div className="absolute -bottom-1/4 -right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-6 lg:px-16 relative z-10">
+      <div className="container mx-auto px-6 lg:px-16 z-10 top-1/4 sticky flex items-center justify-center mb-12">
         {/* 2-column layout */}
         <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start">
           {/* Left Column: Heading */}
@@ -118,10 +95,10 @@ const Testimonials = () => {
             className="lg:w-1/2 text-center lg:text-left"
             style={{ opacity, y: translateY }}
           >
-            <h2 className="text-4xl font-extrabold text-transparent bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text mb-4">
+            <h2 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text mb-6">
               Testimonials
             </h2>
-            <p className="text-gray-300 text-lg max-w-xl mx-auto lg:mx-0">
+            <p className="text-gray-300 text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
               Hear what our members have to say about their experience at ACM
               GHRCEM.
             </p>
@@ -135,17 +112,19 @@ const Testimonials = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.5 }}
-                className="p-8 bg-gradient-to-br from-blue-800 to-cyan-700 border border-blue-500 text-white rounded-3xl shadow-lg shadow-blue-500/30"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.6 }}
+                className="p-8 bg-gradient-to-br from-blue-800 to-cyan-700 border border-blue-500 text-white rounded-3xl shadow-lg shadow-blue-500/30 relative overflow-hidden"
               >
-                <p className="text-white/80 italic mb-6 text-base leading-relaxed">
-                  "{testimonial.feedback}"
-                </p>
-                <h4 className="text-xl font-semibold">{testimonial.name}</h4>
-                <p className="text-cyan-300 text-sm">{testimonial.role}</p>
+                {/* Glow Effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-400/10 blur-2xl opacity-50 pointer-events-none"></div>
+
+                <div className="relative z-10">
+                  <h4 className="text-xl font-semibold">{testimonial.name}</h4>
+                  <p className="text-cyan-300 text-sm">{testimonial.role}</p>
+                </div>
               </motion.div>
             </AnimatePresence>
 
