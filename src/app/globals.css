@@ -34,3 +34,11 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.scrollbar-white::-webkit-scrollbar {
+  background-color: #ffffff;
+}
+
+.scrollbar-white {
+  scrollbar-color: #ffffff transparent;
+}

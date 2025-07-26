@@ -219,7 +219,7 @@ const EventsPage = () => {
           <motion.ul
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="absolute left-0 mt-2 w-full bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-2xl shadow-xl z-20 max-h-60 overflow-y-auto"
+            className="absolute left-0 mt-2 w-full bg-blue-800 backdrop-blur-md border border-white/20 text-white rounded-2xl shadow-xl z-20 max-h-60 overflow-y-auto scrollbar-white"
           >
             <li
               className="px-6 py-3 hover:bg-white/20 cursor-pointer transition-all duration-200 rounded-t-2xl"

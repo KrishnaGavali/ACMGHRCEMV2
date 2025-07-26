@@ -1,17 +1,32 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Star, Code, Calendar, Camera, Users } from "lucide-react";
+import {
+  Star,
+  Code,
+  Calendar,
+  Camera,
+  Users,
+  FileText,
+  Linkedin,
+  Instagram,
+  Github,
+  Globe,
+} from "lucide-react";
 import Footer from "@/Components/Footer";
+import Image from "next/image";
 
 type TeamMember = {
   id: string;
   name: string;
   position: string;
   description: string;
-  skills: string[];
   photo: string;
   teamType: string;
+  linkedin?: string;
+  github?: string;
+  instagram?: string;
+  portfolio?: string;
 };
 
 type TeamData = {
@@ -49,6 +64,12 @@ const teamCategories = [
     icon: Users,
     color: "from-indigo-400 to-purple-600",
   },
+  {
+    id: "treasure",
+    name: "Treasure & Documentation",
+    icon: FileText,
+    color: "from-orange-400 to-yellow-500",
+  },
 ];
 
 const TeamsPage = () => {
@@ -58,187 +79,122 @@ const TeamsPage = () => {
         id: "L001",
         name: "John Doe",
         position: "President",
-        description: "Leading ACM GHRCEM with vision and innovation.",
-        skills: ["Leadership", "Strategic Planning", "Public Speaking"],
-        photo: "/team/john_doe.jpg",
+        description: "Steering the club with leadership and purpose.",
+        photo: "/President.jpg",
         teamType: "Leadership Team",
+        linkedin: "https://linkedin.com/in/johndoe",
       },
       {
         id: "L002",
         name: "Jane Smith",
         position: "Vice President",
-        description: "Supporting operations and driving community engagement.",
-        skills: ["Management", "Community Building", "Event Planning"],
-        photo: "/team/jane_smith.jpg",
+        description: "Supporting operations and fostering innovation.",
+        photo: "/VicePresident.png",
         teamType: "Leadership Team",
-      },
-      {
-        id: "L003",
-        name: "Sarah Johnson",
-        position: "Secretary",
-        description: "Managing documentation and communication workflows.",
-        skills: ["Documentation", "Communication", "Organization"],
-        photo: "/team/sarah_johnson.jpg",
-        teamType: "Leadership Team",
-      },
-      {
-        id: "L004",
-        name: "Michael Chen",
-        position: "Treasurer",
-        description: "Overseeing financial operations and budget management.",
-        skills: ["Financial Management", "Budget Planning", "Analytics"],
-        photo: "/team/michael_chen.jpg",
-        teamType: "Leadership Team",
+        instagram: "https://instagram.com/janesmith",
       },
     ],
     technical: [
       {
         id: "T001",
-        name: "Alex Rodriguez",
-        position: "Technical Lead",
-        description:
-          "Spearheading technical initiatives and development projects.",
-        skills: [
-          "Full Stack Development",
-          "System Architecture",
-          "Team Leadership",
-        ],
-        photo: "/team/alex_rodriguez.jpg",
+        name: "Krishna Gavali",
+        position: "Lead",
+        description: "Orchestrating technical wizardry and development.",
+        photo: "/team/krishna_gavali.jpg",
         teamType: "Technical Team",
+        linkedin: "https://linkedin.com/in/krishnagavali",
+        github: "https://github.com/krishnagavali",
       },
       {
         id: "T002",
-        name: "Emily Wang",
-        position: "Frontend Developer",
-        description: "Creating amazing user experiences and interfaces.",
-        skills: ["React", "UI/UX Design", "JavaScript"],
-        photo: "/team/emily_wang.jpg",
+        name: "Aarav Patel",
+        position: "Member",
+        description: "Building user-friendly interfaces and backend logics.",
+        photo: "/team/aarav_patel.jpg",
         teamType: "Technical Team",
-      },
-      {
-        id: "T003",
-        name: "David Kim",
-        position: "Backend Developer",
-        description: "Building robust server-side solutions and APIs.",
-        skills: ["Node.js", "Database Design", "Cloud Computing"],
-        photo: "/team/david_kim.jpg",
-        teamType: "Technical Team",
-      },
-      {
-        id: "T004",
-        name: "Lisa Zhang",
-        position: "Mobile Developer",
-        description: "Developing cross-platform mobile applications.",
-        skills: ["React Native", "Flutter", "Mobile UI"],
-        photo: "/team/lisa_zhang.jpg",
-        teamType: "Technical Team",
+        github: "https://github.com/aaravp",
       },
     ],
     events: [
       {
         id: "E001",
-        name: "Robert Wilson",
-        position: "Events Coordinator",
-        description: "Orchestrating memorable events and workshops.",
-        skills: [
-          "Event Management",
-          "Vendor Relations",
-          "Project Coordination",
-        ],
-        photo: "/team/robert_wilson.jpg",
+        name: "Sneha Raj",
+        position: "Lead",
+        description: "Leading the squad to craft unforgettable events.",
+        photo: "/team/sneha_raj.jpg",
         teamType: "Events Team",
+        linkedin: "https://linkedin.com/in/sneharaj",
       },
       {
         id: "E002",
-        name: "Amanda Davis",
-        position: "Workshop Organizer",
-        description: "Designing and executing educational workshops.",
-        skills: ["Workshop Design", "Speaker Coordination", "Content Planning"],
-        photo: "/team/amanda_davis.jpg",
+        name: "Dev Mehta",
+        position: "Member",
+        description: "Making sure every detail at events shines bright.",
+        photo: "/team/dev_mehta.jpg",
         teamType: "Events Team",
       },
+    ],
+    pr: [
       {
-        id: "E003",
-        name: "Kevin Lee",
-        position: "Logistics Manager",
-        description: "Handling event logistics and operational support.",
-        skills: [
-          "Logistics Planning",
-          "Resource Management",
-          "Problem Solving",
-        ],
-        photo: "/team/kevin_lee.jpg",
-        teamType: "Events Team",
+        id: "PR001",
+        name: "Mira Kapoor",
+        position: "Lead",
+        description: "Connecting people, ideas, and vibes together.",
+        photo: "/team/mira_kapoor.jpg",
+        teamType: "PR Team",
+        instagram: "https://instagram.com/mira_kapoor",
+      },
+      {
+        id: "PR002",
+        name: "Rahul Singh",
+        position: "Member",
+        description: "Spreading the ACM love all over the place.",
+        photo: "/team/rahul_singh.jpg",
+        teamType: "PR Team",
       },
     ],
     media: [
       {
         id: "M001",
-        name: "Sophia Martinez",
-        position: "Creative Director",
-        description: "Leading creative vision and brand identity.",
-        skills: ["Graphic Design", "Brand Strategy", "Creative Direction"],
-        photo: "/team/sophia_martinez.jpg",
-        teamType: "Media & Creative",
+        name: "Tanya Deshmukh",
+        position: "Photographer",
+        description: "Freezing memories and candid vibes in every click.",
+        photo: "/team/tanya_deshmukh.jpg",
+        teamType: "Media & Creative Team",
+        portfolio: "https://tanyashots.com",
       },
       {
         id: "M002",
-        name: "James Taylor",
-        position: "Content Creator",
-        description: "Producing engaging content across all platforms.",
-        skills: ["Content Writing", "Video Production", "Social Media"],
-        photo: "/team/james_taylor.jpg",
-        teamType: "Media & Creative",
-      },
-      {
-        id: "M003",
-        name: "Maya Patel",
-        position: "Social Media Manager",
-        description: "Managing our online presence and community engagement.",
-        skills: ["Social Media Strategy", "Community Management", "Analytics"],
-        photo: "/team/maya_patel.jpg",
-        teamType: "Media & Creative",
+        name: "Yash Joshi",
+        position: "Editor",
+        description: "Crafting magic in post with colors and cuts.",
+        photo: "/team/yash_joshi.jpg",
+        teamType: "Media & Creative Team",
       },
     ],
-    pr: [
+    treasure: [
       {
-        id: "P001",
-        name: "Christopher Brown",
-        position: "PR Manager",
-        description:
-          "Building relationships and managing public communications.",
-        skills: [
-          "Public Relations",
-          "Media Relations",
-          "Strategic Communication",
-        ],
-        photo: "/team/christopher_brown.jpg",
-        teamType: "Public Relations",
+        id: "TR001",
+        name: "Simran Kaur",
+        position: "Treasurer",
+        description: "Keeping our accounts sharper than our code.",
+        photo: "/team/simran_kaur.jpg",
+        teamType: "Treasury & Docs",
+        linkedin: "https://linkedin.com/in/simran-kaur",
       },
       {
-        id: "P002",
-        name: "Rachel Green",
-        position: "Outreach Coordinator",
-        description: "Expanding our network and community partnerships.",
-        skills: ["Partnership Development", "Networking", "Community Outreach"],
-        photo: "/team/rachel_green.jpg",
-        teamType: "Public Relations",
+        id: "TR002",
+        name: "Nikhil Rao",
+        position: "Documentation",
+        description: "Archiving moments and maintaining club chronicles.",
+        photo: "/team/nikhil_rao.jpg",
+        teamType: "Treasury & Docs",
       },
     ],
   };
 
   const [selectedTeam, setSelectedTeam] =
     useState<keyof TeamData>("leadership");
-
-  const getCurrentTeamMembers = (): TeamMember[] => {
-    return teamData[selectedTeam] || [];
-  };
-
-  const getInitials = (name: string): string =>
-    name
-      .split(" ")
-      .map((n) => n[0])
-      .join("");
 
   return (
     <>
@@ -250,8 +206,8 @@ const TeamsPage = () => {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 blur-3xl rounded-full animate-pulse" />
         </div>
 
-        {/* Page Header */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 py-16 relative z-10">
+          {/* Page Header */}
           <motion.div
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -300,7 +256,7 @@ const TeamsPage = () => {
 
           {/* Team Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {getCurrentTeamMembers().map((member, index) => (
+            {teamData[selectedTeam]?.map((member, index) => (
               <motion.div
                 key={member.id}
                 className="group relative"
@@ -309,12 +265,16 @@ const TeamsPage = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
               >
-                <div className="relative p-6 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 shadow-2xl hover:bg-white/10 transition-all duration-500 overflow-hidden">
+                <div className="relative p-6 h-[500px] rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 shadow-2xl hover:bg-white/10 transition-all duration-500 overflow-hidden">
                   <div className="relative mb-6">
-                    <div className="w-24 h-24 mx-auto bg-gradient-to-br from-blue-400 to-purple-400 rounded-full flex items-center justify-center shadow-lg">
-                      <span className="text-white font-bold text-2xl">
-                        {getInitials(member.name)}
-                      </span>
+                    <div className="aspect-square w-44 mx-auto rounded-xl overflow-hidden shadow-xl">
+                      <Image
+                        src={member.photo}
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                        width={512}
+                        height={512}
+                      />
                     </div>
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                       <span className="px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg">
@@ -328,15 +288,59 @@ const TeamsPage = () => {
                   <p className="text-gray-300 text-center mb-4 text-sm leading-relaxed">
                     {member.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 justify-center mb-4">
-                    {member.skills.map((skill, skillIndex) => (
-                      <span
-                        key={skillIndex}
-                        className="px-2 py-1 rounded-full text-xs bg-white/10 text-cyan-300 border border-cyan-500/30"
+                  <div className="flex flex-col justify-center items-center space-x-4 mt-4">
+                    {member.linkedin && (
+                      <motion.a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 hover:from-blue-500/30 hover:to-cyan-500/30 transition-all duration-300"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                       >
-                        {skill}
-                      </span>
-                    ))}
+                        <Linkedin size={18} />
+                        <span>LinkedIn</span>
+                      </motion.a>
+                    )}
+                    {member.github && (
+                      <motion.a
+                        href={member.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 px-4 py-2 rounded-full bg-gradient-to-r from-gray-800/20 to-gray-600/20 border border-gray-500/30 text-gray-300 hover:from-gray-800/30 hover:to-gray-600/30 transition-all duration-300"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Github size={18} />
+                        <span>GitHub</span>
+                      </motion.a>
+                    )}
+                    {member.instagram && (
+                      <motion.a
+                        href={member.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 hover:from-pink-500/30 hover:to-purple-500/30 transition-all duration-300"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Instagram size={18} />
+                        <span>Instagram</span>
+                      </motion.a>
+                    )}
+                    {member.portfolio && (
+                      <motion.a
+                        href={member.portfolio}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-400/30 text-blue-300 hover:from-blue-500/30 hover:to-cyan-500/30 transition-all duration-300"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Globe size={18} />
+                        <span>Portfolio</span>
+                      </motion.a>
+                    )}
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none" />
                 </div>
