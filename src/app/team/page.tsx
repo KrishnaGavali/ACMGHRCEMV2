@@ -347,30 +347,6 @@ const TeamsPage = () => {
               </motion.div>
             ))}
           </div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8"
-          >
-            <div className="text-center p-8 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">25+</div>
-              <div className="text-gray-300">Active Members</div>
-            </div>
-            <div className="text-center p-8 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10">
-              <div className="text-4xl font-bold text-blue-400 mb-2">50+</div>
-              <div className="text-gray-300">Events Organized</div>
-            </div>
-            <div className="text-center p-8 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10">
-              <div className="text-4xl font-bold text-purple-400 mb-2">
-                1000+
-              </div>
-              <div className="text-gray-300">Students Reached</div>
-            </div>
-          </motion.div>
         </div>
         <Footer />
       </div>
