@@ -16,133 +16,70 @@ const EventsPage = () => {
   // Sample event data based on your JSON structure
   const eventData = [
     {
-      eventId: "E001",
-      eventName: "Tech Talk: AI Revolution",
-      eventDate: "21",
-      eventMonth: "July",
-      eventYear: "2025",
-      eventTime: "10:30 AM - 01:30 PM",
-      location: "Auditorium A",
+      eventId: "E003",
+      eventName: "Web Development 3 Day Workshop",
+      eventDate: "27",
+      eventMonth: "September",
+      eventYear: "2024",
+      eventTime: "11:30 AM - 01:30 PM",
+      location: "E - 107",
       description:
-        "An insightful talk on the latest advancements in Artificial Intelligence.",
+        "The 3-day event starts on 25th Sept with UI/UX fundamentals, followed by React.js hands-on on 26th, and wraps up on 27th with Firebase backend development",
       instagramLink: "https://instagram.com/techtalk_ai",
       linkedInLink: "https://linkedin.com/company/techtalk_ai",
-      posterPhoto: "/events/techtalk_ai.jpg",
+      posterPhoto: "/Events/WEBDEV_27_SEP_2024.png",
       Speaker: {
-        name: "Dr. Jane Smith",
-        Position: "AI Researcher",
-        Company: "Tech Innovations Inc.",
+        name: "Tousif Tamboli",
+        Position: "TYDS Student",
+        Company: "GHRCEM",
         bio: "Dr. Jane Smith is a leading AI researcher with over 10 years",
         photo: "/speakers/jane_smith.jpg",
       },
-      status: "upcoming",
+      status: "completed",
     },
     {
       eventId: "E002",
-      eventName: "Blockchain Basics",
-      eventDate: "15",
-      eventMonth: "April",
-      eventYear: "2025",
-      eventTime: "02:00 PM - 05:00 PM",
-      location: "Conference Room B",
-      description: "A beginner's guide to understanding blockchain technology.",
-      instagramLink: "https://instagram.com/blockchain_basics",
-      linkedInLink: "https://linkedin.com/company/blockchain_basics",
-      posterPhoto: "/events/blockchain_basics.jpg",
-      Speaker: {
-        name: "Mr. John Doe",
-        Position: "Blockchain Developer",
-        Company: "Crypto Solutions",
-        bio: "John Doe is a blockchain expert with a passion for teaching.",
-        photo: "/speakers/john_doe.jpg",
-      },
-      status: "Completed",
-    },
-    {
-      eventId: "E003",
-      eventName: "Cybersecurity Essentials",
-      eventDate: "10",
-      eventMonth: "May",
-      eventYear: "2025",
-      eventTime: "11:00 AM - 01:00 PM",
-      location: "Auditorium C",
+      eventName: "SY Induction",
+      eventDate: "26",
+      eventMonth: "July",
+      eventYear: "2024",
+      eventTime: "11:30 AM - 1:30 PM",
+      location: "E - 115",
       description:
-        "Learn the fundamentals of cybersecurity and how to protect your data.",
-      instagramLink: "https://instagram.com/cybersecurity_essentials",
-      linkedInLink: "https://linkedin.com/company/cybersecurity_essentials",
-      posterPhoto: "/events/cybersecurity_essentials.jpg",
+        "SyInduction was organized to raise awareness among students about the ACM Student Chapter, its vision, activities, and the opportunities it offers to grow in the world of computing and technology.",
+      instagramLink: "https://instagram.com/techtalk_ai",
+      linkedInLink: "https://linkedin.com/company/techtalk_ai",
+      posterPhoto: "/Events/SYINDUCTION_26_JULY_2024.jpg",
       Speaker: {
-        name: "Ms. Alice Brown",
-        Position: "Cybersecurity Analyst",
-        Company: "SecureTech",
-        bio: "Alice Brown specializes in network security and data protection.",
-        photo: "/speakers/alice_brown.jpg",
+        name: "ACM TEAM",
+        Position: "",
+        Company: "GHRCEM (2024 - 2025)",
+        bio: "Dr. Jane Smith is a leading AI researcher with over 10 years",
+        photo: "/speakers/jane_smith.jpg",
       },
-      status: "Completed",
+      status: "completed",
     },
     {
-      eventId: "E004",
-      eventName: "Cloud Computing Workshop",
-      eventDate: "18",
-      eventMonth: "June",
-      eventYear: "2025",
-      eventTime: "09:00 AM - 12:00 PM",
-      location: "Lab 1",
-      description: "Hands-on workshop on cloud computing and its applications.",
-      instagramLink: "https://instagram.com/cloud_computing_workshop",
-      linkedInLink: "https://linkedin.com/company/cloud_computing_workshop",
-      posterPhoto: "/events/cloud_computing_workshop.jpg",
-      Speaker: {
-        name: "Dr. Emily White",
-        Position: "Cloud Architect",
-        Company: "Cloudify Inc.",
-        bio: "Emily White has extensive experience in cloud infrastructure design.",
-        photo: "/speakers/emily_white.jpg",
-      },
-      status: "Completed",
-    },
-    {
-      eventId: "E005",
-      eventName: "IoT Innovations",
-      eventDate: "25",
-      eventMonth: "April",
-      eventYear: "2025",
-      eventTime: "03:00 PM - 06:00 PM",
-      location: "Auditorium B",
+      eventId: "E001",
+      eventName: "Inauguration Ceremony",
+      eventDate: "14",
+      eventMonth: "March",
+      eventYear: "2024",
+      eventTime: "11:30 AM - 12:30 PM",
+      location: "E - 110",
       description:
-        "Exploring the latest trends in Internet of Things technology.",
-      instagramLink: "https://instagram.com/iot_innovations",
-      linkedInLink: "https://linkedin.com/company/iot_innovations",
-      posterPhoto: "/events/iot_innovations.jpg",
+        "The ACM Club was officially inaugurated on 14th March 2024, marking the beginning of a dynamic community for tech enthusiasts. The event featured insightful talks, future plans, and a shared vision to foster innovation, collaboration, and learning among students.",
+      instagramLink: "https://instagram.com/techtalk_ai",
+      linkedInLink: "https://linkedin.com/company/techtalk_ai",
+      posterPhoto: "/Events/INAUGURATION_11_MAR_2024.jpeg",
       Speaker: {
-        name: "Mr. Robert Green",
-        Position: "IoT Specialist",
-        Company: "SmartTech",
-        bio: "Robert Green is a pioneer in IoT solutions and smart devices.",
-        photo: "/speakers/robert_green.jpg",
+        name: "Amey Tambe",
+        Position: "Director",
+        Company: "Softech Data Security",
+        bio: "Dr. Jane Smith is a leading AI researcher with over 10 years",
+        photo: "/speakers/jane_smith.jpg",
       },
-      status: "Completed",
-    },
-    {
-      eventId: "E006",
-      eventName: "Big Data Analytics",
-      eventDate: "12",
-      eventMonth: "May",
-      eventYear: "2025",
-      eventTime: "10:00 AM - 01:00 PM",
-      location: "Conference Room A",
-      description: "Understanding the power of big data and its applications.",
-      instagramLink: "https://instagram.com/big_data_analytics",
-      linkedInLink: "https://linkedin.com/company/big_data_analytics",
-      posterPhoto: "/events/big_data_analytics.jpg",
-      Speaker: {
-        name: "Dr. Michael Lee",
-        Position: "Data Scientist",
-        Company: "Data Insights Co.",
-        bio: "Michael Lee is a renowned data scientist with a focus on analytics.",
-        photo: "/speakers/michael_lee.jpg",
-      },
-      status: "Completed",
+      status: "completed",
     },
   ];
 
@@ -316,8 +253,8 @@ const EventsPage = () => {
                   <span
                     className={`px-3 py-1 rounded-full text-xs font-semibold ${
                       event.status === "upcoming"
-                        ? " text-green-300 border border-green-500"
-                        : " text-blue-300 border border-blue-500"
+                        ? " text-green-200 border border-green-500 bg-green-500"
+                        : " text-blue-200 border border-blue-500 bg-blue-500"
                     }`}
                   >
                     {event.status === "upcoming" ? "Upcoming" : "Completed"}
@@ -326,7 +263,7 @@ const EventsPage = () => {
 
                 {/* Event Image Placeholder */}
                 <Image
-                  src={"/EventPlaceholder.jpg"}
+                  src={event.posterPhoto}
                   alt={event.eventName}
                   width={400}
                   height={400}

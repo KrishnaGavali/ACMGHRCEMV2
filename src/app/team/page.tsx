@@ -77,21 +77,26 @@ const TeamsPage = () => {
     leadership: [
       {
         id: "L001",
-        name: "John Doe",
+        name: "Aditya Khurade",
         position: "President",
         description: "Steering the club with leadership and purpose.",
         photo: "/President.jpg",
         teamType: "Leadership Team",
-        linkedin: "https://linkedin.com/in/johndoe",
+        linkedin: "https://www.linkedin.com/in/aditya-kurhade/",
+        github: "https://github.com/aditya-kurhade",
+        instagram: "https://www.instagram.com/_aditya_kurhade_/",
       },
       {
         id: "L002",
-        name: "Jane Smith",
+        name: "Shubham Shahu",
         position: "Vice President",
         description: "Supporting operations and fostering innovation.",
         photo: "/VicePresident.png",
         teamType: "Leadership Team",
-        instagram: "https://instagram.com/janesmith",
+        instagram: "https://www.instagram.com/_shubham_02__/",
+        linkedin: "https://www.linkedin.com/in/shubham-sahu02/",
+        github: "https://github.com/02-Shubham",
+        portfolio: "https://02-shubham.vercel.app/",
       },
     ],
     technical: [
@@ -104,24 +109,27 @@ const TeamsPage = () => {
         teamType: "Technical Team",
         linkedin: "https://linkedin.com/in/krishnagavali",
         github: "https://github.com/krishnagavali",
+        instagram: "https://www.instagram.com/krishnagavali3/",
       },
       {
         id: "T002",
-        name: "Aarav Patel",
+        name: "Pratik Mane",
         position: "Member",
         description: "Building user-friendly interfaces and backend logics.",
         photo: "/team/aarav_patel.jpg",
         teamType: "Technical Team",
+        linkedin: "https://www.linkedin.com/in/pratik-mane-729b97265/",
+        instagram: "https://www.instagram.com/pratikmane545/",
         github: "https://github.com/aaravp",
       },
     ],
     events: [
       {
         id: "E001",
-        name: "Sneha Raj",
+        name: "Anurag Jadhav",
         position: "Lead",
         description: "Leading the squad to craft unforgettable events.",
-        photo: "/team/sneha_raj.jpg",
+        photo: "/EventManagement.jpg",
         teamType: "Events Team",
         linkedin: "https://linkedin.com/in/sneharaj",
       },
@@ -137,20 +145,22 @@ const TeamsPage = () => {
     pr: [
       {
         id: "PR001",
-        name: "Mira Kapoor",
+        name: "Mansi Patil",
         position: "Lead",
         description: "Connecting people, ideas, and vibes together.",
-        photo: "/team/mira_kapoor.jpg",
+        photo: "/PRLead.jpg",
         teamType: "PR Team",
         instagram: "https://instagram.com/mira_kapoor",
       },
       {
         id: "PR002",
-        name: "Rahul Singh",
+        name: "Yukti Shetty",
         position: "Member",
         description: "Spreading the ACM love all over the place.",
         photo: "/team/rahul_singh.jpg",
         teamType: "PR Team",
+        linkedin: "https://www.linkedin.com/in/yukti-shetty-76b344330/",
+        instagram: "https://www.instagram.com/yukti.shetty/#",
       },
     ],
     media: [
@@ -265,7 +275,7 @@ const TeamsPage = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
               >
-                <div className="relative p-6 h-[500px] rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 shadow-2xl hover:bg-white/10 transition-all duration-500 overflow-hidden">
+                <div className="relative p-6 h-fit rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 shadow-2xl hover:bg-white/10 transition-all duration-500 overflow-hidden">
                   <div className="relative mb-6">
                     <div className="aspect-square w-44 mx-auto rounded-xl overflow-hidden shadow-xl">
                       <Image
@@ -285,10 +295,7 @@ const TeamsPage = () => {
                   <h3 className="text-xl font-bold text-center mb-2 text-white group-hover:text-cyan-300 transition-colors duration-300">
                     {member.name}
                   </h3>
-                  <p className="text-gray-300 text-center mb-4 text-sm leading-relaxed">
-                    {member.description}
-                  </p>
-                  <div className="flex flex-col justify-center items-center space-x-4 mt-4">
+                  <div className="flex flex-wrap justify-center items-center gap-4 mt-4">
                     {member.linkedin && (
                       <motion.a
                         href={member.linkedin}
@@ -342,6 +349,7 @@ const TeamsPage = () => {
                       </motion.a>
                     )}
                   </div>
+
                   <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none" />
                 </div>
               </motion.div>
